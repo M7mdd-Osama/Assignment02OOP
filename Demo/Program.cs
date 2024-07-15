@@ -28,6 +28,13 @@ namespace Demo
 
             int Num = Note.GetPersonNumber("Ali");
             Console.WriteLine(Num == -1? "Not Found" : Num);
+
+            Note["Omar"] = 786;
+            Console.WriteLine(Note["Omar"]);
+
+            for (int i = 0; i < Note.Size; i++) 
+            Console.WriteLine(Note[i]); 
+
         }
     }
 }

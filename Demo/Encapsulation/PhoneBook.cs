@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -62,7 +63,43 @@ namespace Demo.Encapsulation
                         Numbers[i] = NewNumber;
                         break;
                     }
-        } 
+        }
         #endregion
+        #region Indexer
+        public int this[string name]
+        {
+            get
+            {
+                if (Names is not null && Numbers is not null)
+                {
+                    for (int i = 0; i < Names.Length; i++)
+                    {
+                        if (Names[i] == name)
+                            return Numbers[i];
+                    }
+                }
+                return -1;
+            }
+            set
+            {
+                if (Names is not null && Numbers is not null)
+
+                    for (int i = 0; i < Names.Length; i++)
+
+                        if (Names[i] == name)
+                        {
+                            Numbers[i] = value;
+                            break;
+                        }
+            }
+        }
+        public string this[int index]
+        {
+            get
+            {
+                return $"{index} :: {Names[index]} :: {Numbers[index]}";
+            }
+            #endregion
+        }
     }
 }
