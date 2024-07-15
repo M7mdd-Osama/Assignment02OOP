@@ -51,16 +51,13 @@ namespace Demo.Encapsulation
             get { return age; }
             set { age = value; }
         }
-        #endregion
-
         //private decimal deduction; //Derived Attribute
 
         public decimal Deduction
         {
             get { return Salary * 0.2M; }
         }
-
-
+        #endregion
 
     }
 }

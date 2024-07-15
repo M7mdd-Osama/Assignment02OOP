@@ -21,7 +21,13 @@ namespace Demo
             //Employee emp = new Employee(50, "Mohamed", 6000, 21);
             //Console.WriteLine(emp.Deduction); 
             #endregion
+            PhoneBook Note = new PhoneBook(3);
+            Note.AddPerson(0, "Mohamed", 2133);
+            Note.AddPerson(1, "Ali", 5215);
+            Note.AddPerson(2, "Omar", 863133);
 
+            int Num = Note.GetPersonNumber("Ali");
+            Console.WriteLine(Num == -1? "Not Found" : Num);
         }
     }
 }
