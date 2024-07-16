@@ -98,8 +98,8 @@ namespace Demo.Encapsulation
             get
             {
                 return $"{index} :: {Names[index]} :: {Numbers[index]}";
-            }
-            #endregion
+            }            
         }
+        #endregion
     }
 }
