@@ -55,8 +55,32 @@ namespace Ass02OOP
 
             return new HireDate(day, month, year);
         }
-
-
-
+        public static bool CompartHiringDate(HireDate left, HireDate right)
+        {
+            if (left.Year > right.Year)
+            {
+                return true;
+            }
+            else if (left.Year < right.Year)
+            {
+                return false;
+            }
+            else if (left.Month > right.Month)
+            {
+                return true;
+            }
+            else if (left.Month < right.Month)
+            {
+                return false;
+            }
+            else if (left.Day > right.Day)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

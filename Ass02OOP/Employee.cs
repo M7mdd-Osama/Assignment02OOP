@@ -76,5 +76,22 @@ namespace Ass02OOP
 
             return employee;
         }
+        public static Employee[] SortEmployees(Employee[] employees)
+        {
+            for (int i = 0; i < employees.Length - 1; i++)
+            {
+                int min_Index = i;
+                for (int j = i + 1; j < employees.Length; j++)
+                    if (HireDate.CompartHiringDate(employees[j].hireDate, employees[min_Index].hireDate))
+                        min_Index = j;
+                if (min_Index != i)
+                {
+                    Employee temp = new Employee(employees[min_Index]);
+                    employees[min_Index] = new Employee(employees[i]);
+                    employees[i] = temp;
+                }
+            }
+            return employees;
+        }
     }
 }

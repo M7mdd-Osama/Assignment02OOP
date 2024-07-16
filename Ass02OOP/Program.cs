@@ -41,11 +41,19 @@ namespace Ass02OOP
             //Console.WriteLine($"Age: {people[Old].Age}");
             #endregion
             #region Part03-Q6 : Design and implement a Class for the employees in a company:Employee is identified by an ID, Name, security level, salary, hire date and Gender.
-            Employee[] employees = new Employee[3];
-            employees[0] = Employee.CreateEmployee(SecurityPrivileges.DBA);
-            employees[1] = Employee.CreateEmployee(SecurityPrivileges.Guest);
-            employees[2] = Employee.CreateEmployee(SecurityPrivileges.DBA | SecurityPrivileges.Guest | SecurityPrivileges.Developer | SecurityPrivileges.Secretary);
-            foreach (Employee employee in employees)
+            Employee[] emp = new Employee[3];
+            emp[0] = Employee.CreateEmployee(SecurityPrivileges.DBA);
+            emp[1] = Employee.CreateEmployee(SecurityPrivileges.Guest);
+            emp[2] = Employee.CreateEmployee(SecurityPrivileges.DBA | SecurityPrivileges.Guest | SecurityPrivileges.Developer | SecurityPrivileges.Secretary);
+            foreach (Employee employee in emp)
+            {
+                Console.WriteLine(employee);
+            }
+            #endregion
+            #region Q7
+            emp = Employee.SortEmployees(emp);
+
+            foreach (Employee employee in emp)
             {
                 Console.WriteLine(employee);
             }
