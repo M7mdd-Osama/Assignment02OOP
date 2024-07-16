@@ -1,4 +1,5 @@
 ﻿using Demo.Encapsulation;
+using Demo.Inheritance;
 
 namespace Demo
 {
@@ -37,13 +38,21 @@ namespace Demo
             //    Console.WriteLine(Note[i]);  
             #endregion
             #region Class
-            Car C1;
-            C1 = new Car();
-            Console.WriteLine(C1);
-            Car C2 = new Car(20, "Kia", 300);
-            Console.WriteLine(C2); 
+            //Car C1;
+            //C1 = new Car();
+            //Console.WriteLine(C1);
+            //Car C2 = new Car(20, "Kia", 300);
+            //Console.WriteLine(C2);
             #endregion
-
+            #region Inheritance
+            Parent P = new Parent(2, 5);
+            Console.WriteLine(P);
+            Console.WriteLine(P.Product());
+            Console.WriteLine("____________________");
+            Child C = new Child(3, 2, 1);
+            Console.WriteLine(C);
+            Console.WriteLine(C.Product()); 
+            #endregion
         }
     }
 }
