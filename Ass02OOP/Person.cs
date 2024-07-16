@@ -39,5 +39,6 @@ namespace Ass02OOP
                 return $"{index} :: {name[index]} :: {age[index]}";
             }
         }
+
     }
 }
