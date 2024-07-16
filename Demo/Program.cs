@@ -45,14 +45,15 @@ namespace Demo
             //Console.WriteLine(C2);
             #endregion
             #region Inheritance
-            Parent P = new Parent(2, 5);
-            Console.WriteLine(P);
-            Console.WriteLine(P.Product());
-            Console.WriteLine("____________________");
-            Child C = new Child(3, 2, 1);
-            Console.WriteLine(C);
-            Console.WriteLine(C.Product()); 
+            //Parent P = new Parent(2, 5);
+            //Console.WriteLine(P);
+            //Console.WriteLine(P.Product());
+            //Console.WriteLine("____________________");
+            //Child C = new Child(3, 2, 1);
+            //Console.WriteLine(C);
+            //Console.WriteLine(C.Product()); 
             #endregion
+
         }
     }
 }
